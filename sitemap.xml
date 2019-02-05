@@ -4,39 +4,39 @@
     
     <url>
     
-      <loc>/post/</loc>
-      <lastmod>2017-01-01T00:00:00-08:00</lastmod>
+      <loc>https://willeatherton.com/post/my-first-post/</loc>
+      <lastmod>2019-02-05T15:50:20-08:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>/publication/</loc>
-      <lastmod>2017-01-01T00:00:00-08:00</lastmod>
+      <loc>https://willeatherton.com/publication/</loc>
+      <lastmod>2019-02-05T11:38:09-08:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>/talk/</loc>
-      <lastmod>2017-01-01T00:00:00-08:00</lastmod>
+      <loc>https://willeatherton.com/talk/</loc>
+      <lastmod>2019-02-05T11:38:09-08:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>/author/admin/</loc>
+      <loc>https://willeatherton.com/author/admin/</loc>
+      <lastmod>2019-02-05T15:50:20-08:00</lastmod>
     </url>
     
   
     
     <url>
     
-      <loc>/</loc>
-      <lastmod>2017-10-15T00:00:00-07:00</lastmod>
+      <loc>https://willeatherton.com/author/</loc>
       <priority>0</priority>
     </url>
     
@@ -44,7 +44,7 @@
     
     <url>
     
-      <loc>/author/</loc>
+      <loc>https://willeatherton.com/authors/</loc>
       <priority>0</priority>
     </url>
     
@@ -52,7 +52,7 @@
     
     <url>
     
-      <loc>/authors/</loc>
+      <loc>https://willeatherton.com/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -60,7 +60,8 @@
     
     <url>
     
-      <loc>/categories/</loc>
+      <loc>https://willeatherton.com/post/</loc>
+      <lastmod>2019-02-05T15:50:20-08:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -68,7 +69,7 @@
     
     <url>
     
-      <loc>/publication_types/</loc>
+      <loc>https://willeatherton.com/publication_types/</loc>
       <priority>0</priority>
     </url>
     
@@ -76,7 +77,16 @@
     
     <url>
     
-      <loc>/tags/</loc>
+      <loc>https://willeatherton.com/tags/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://willeatherton.com/</loc>
+      <lastmod>2019-02-05T11:38:09-08:00</lastmod>
       <priority>0</priority>
     </url>
     

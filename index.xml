@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic on Academic</title>
-    <link>/</link>
-    <description>Recent content in Academic on Academic</description>
+    <title>Will Eatherton on Will Eatherton</title>
+    <link>https://willeatherton.com/</link>
+    <description>Recent content in Will Eatherton on Will Eatherton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0700</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://willeatherton.com/post/my-first-post/</link>
+      <pubDate>Tue, 05 Feb 2019 14:00:29 -0800</pubDate>
+      
+      <guid>https://willeatherton.com/post/my-first-post/</guid>
+      <description>&lt;p&gt;my text&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>
