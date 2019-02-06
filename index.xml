@@ -11,10 +11,10 @@
     
     <item>
       <title>Opaque Crypto : What happens when the Enterprise Network goes Dark ?</title>
-      <link>https://willeatherton.com/post/crypto1v4/</link>
+      <link>https://willeatherton.com/2017/09/opaque-crypto-what-happens-when-the-enterprise-network-goes-dark/</link>
       <pubDate>Tue, 05 Sep 2017 14:00:29 -0800</pubDate>
       
-      <guid>https://willeatherton.com/post/crypto1v4/</guid>
+      <guid>https://willeatherton.com/2017/09/opaque-crypto-what-happens-when-the-enterprise-network-goes-dark/</guid>
       <description>
 
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;The Rise of Opaque encryption Resets the Network Security Industry&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
@@ -253,21 +253,41 @@
     
     <item>
       <title>ARM CPU&#39;s for Data Center Servers</title>
-      <link>https://willeatherton.com/post/armanalysis/</link>
+      <link>https://willeatherton.com/2012/09/arm-cpus-for-data-center-servers/</link>
       <pubDate>Wed, 05 Sep 2012 14:00:29 -0800</pubDate>
       
-      <guid>https://willeatherton.com/post/armanalysis/</guid>
+      <guid>https://willeatherton.com/2012/09/arm-cpus-for-data-center-servers/</guid>
       <description>
 
-&lt;p&gt;&lt;em&gt;{Note this writeup was done privately at end of 2012 and so pretty outdated, but still I think it was a decent summary of the state of ARM at that time and so I publish it for fun.  I am considering to do an updated Arm Analysis given the changes that have happened in past year}&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;{Note this writeup was done privately at end of 2012 and so pretty outdated, but still I think it was a decent summary of the state of ARM at that time and so I publish it for fun. I am considering to do an updated Arm Analysis given the changes that have happened in past year}&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Will Eatherton - willeatherton@gmail.com&lt;/em&gt;&lt;/p&gt;
 
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#exec-summary&#34;&gt;Exec Summary&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#challenges-for-arm-as-server-cpu-isa&#34;&gt;Challenges for ARM as Server CPU ISA&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#os-support-optimizations&#34;&gt;OS Support Optimizations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#compilation-tool-chains&#34;&gt;Compilation Tool Chains&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#hypervisor-support&#34;&gt;Hypervisor Support&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#java-virtual-machines&#34;&gt;Java Virtual Machines&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#cpu-level-analysis-of-arm-vs-x86&#34;&gt;CPU level Analysis of ARM vs x86&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#analysis-of-arm-cpu-for-a-m-r-compute-node&#34;&gt;Analysis of Arm CPU for a M&amp;amp;R Compute Node&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+
+
 &lt;h2 id=&#34;exec-summary&#34;&gt;Exec Summary&lt;/h2&gt;
 
-&lt;p&gt;The buzz around Arm based CPU&amp;rsquo;s for the Server Ecosystem has been growing notably in mid 2012.  Gartner predicts that ARM servers will own 15 percent of the server CPU market within four years.&lt;/p&gt;
+&lt;p&gt;The buzz around Arm based CPU&amp;rsquo;s for the Server Ecosystem has been growing notably in mid 2012. Gartner predicts that ARM servers will own 15 percent of the server CPU market within four years.&lt;/p&gt;
 
-&lt;p&gt;There are numerous planned ARM based CPU server chips for server market : ST Micro , &lt;a href=&#34;http://www.eetimes.com/electronics-news/4230166/AMCC-demos-64-bit-ARM-server-chip&#34; target=&#34;_blank&#34;&gt;Applied Micro&lt;/a&gt; has early 64-bit prototype and seems to be leading support for ARM v8,  &lt;a href=&#34;http://www.marvell.com/embedded-processors/armada-xp/&#34; target=&#34;_blank&#34;&gt;Marvell&lt;/a&gt; was early with a 32-bit server ARM based server focused processor, &lt;a href=&#34;http://arstechnica.com/information-technology/2012/10/amd-announces-arm-based-opteron-cpus-due-to-launch-in-2014/&#34; target=&#34;_blank&#34;&gt;AMD&lt;/a&gt; has announced 64-bit ARM CPUs by 2014 , &lt;a href=&#34;http://www.eetimes.com/electronics-news/4398058/ARM--LSI-on-chip-link-connects-up-to-32-cores&#34; target=&#34;_blank&#34;&gt;LSI&lt;/a&gt; , and startup &lt;a href=&#34;http://www.calxeda.com&#34; target=&#34;_blank&#34;&gt;Calxeda&lt;/a&gt;.  Additionally there are indications within the industry that IBM/Samsung may be considering opportunities in server space using ARM (maybe more as SOC designs with partners).&lt;/p&gt;
+&lt;p&gt;There are numerous planned ARM based CPU server chips for server market : ST Micro , &lt;a href=&#34;http://www.eetimes.com/electronics-news/4230166/AMCC-demos-64-bit-ARM-server-chip&#34; target=&#34;_blank&#34;&gt;Applied Micro&lt;/a&gt; has early 64-bit prototype and seems to be leading support for ARM v8, &lt;a href=&#34;http://www.marvell.com/embedded-processors/armada-xp/&#34; target=&#34;_blank&#34;&gt;Marvell&lt;/a&gt; was early with a 32-bit server ARM based server focused processor, &lt;a href=&#34;http://arstechnica.com/information-technology/2012/10/amd-announces-arm-based-opteron-cpus-due-to-launch-in-2014/&#34; target=&#34;_blank&#34;&gt;AMD&lt;/a&gt; has announced 64-bit ARM CPUs by 2014 , &lt;a href=&#34;http://www.eetimes.com/electronics-news/4398058/ARM--LSI-on-chip-link-connects-up-to-32-cores&#34; target=&#34;_blank&#34;&gt;LSI&lt;/a&gt; , and startup &lt;a href=&#34;http://www.calxeda.com&#34; target=&#34;_blank&#34;&gt;Calxeda&lt;/a&gt;. Additionally there are indications within the industry that IBM/Samsung may be considering opportunities in server space using ARM (maybe more as SOC designs with partners).&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Beyond silicon plays, early stage startups like &lt;a href=&#34;http://www.netspeedsystems.com&#34; target=&#34;_blank&#34;&gt;Netspeed&lt;/a&gt; are looking at enabling the growing number of players interested in high end multi-core ARM SOCs by providing a coherent interconnect&lt;/p&gt;&lt;/li&gt;
@@ -275,7 +295,7 @@
 &lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.arm.com/about/newsroom/arm-announces-new-high-performance-system-ip-to-address-demand-for-energy-efficient-many-core.php&#34; target=&#34;_blank&#34;&gt;ARM is also working on a coherent interconnectt&lt;/a&gt; for massively multi-core designs with support for 16 cores going to 32 in the future&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;From a systems standpoint &lt;a href=&#34;http://content.dell.com/us/en/enterprise/d/campaigns/project-copper&#34; target=&#34;_blank&#34;&gt;Dell&lt;/a&gt;  has announced an ARM based server starting with a 32-bit version, and &lt;a href=&#34;http://liliputing.com/2012/06/hp-project-moonshot-drops-arm-will-use-intel-atom-servers.html&#34; target=&#34;_blank&#34;&gt;HP has indicated&lt;/a&gt; that their proof of concept project (Moonshot) will support ATOM and ARM based CPUs.&lt;/p&gt;
+&lt;p&gt;From a systems standpoint &lt;a href=&#34;http://content.dell.com/us/en/enterprise/d/campaigns/project-copper&#34; target=&#34;_blank&#34;&gt;Dell&lt;/a&gt; has announced an ARM based server starting with a 32-bit version, and &lt;a href=&#34;http://liliputing.com/2012/06/hp-project-moonshot-drops-arm-will-use-intel-atom-servers.html&#34; target=&#34;_blank&#34;&gt;HP has indicated&lt;/a&gt; that their proof of concept project (Moonshot) will support ATOM and ARM based CPUs.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Beyond the system level end Mega Data center operators like &lt;a href=&#34;http://www.eetimes.com/electronics-news/4400339/Linaro-ARM-server-efforts-targets-Linux-code&#34; target=&#34;_blank&#34;&gt;Facebook have also have shown interestt&lt;/a&gt; in helping to support ARM insertion into data center&lt;/p&gt;&lt;/li&gt;
@@ -283,9 +303,9 @@
 &lt;li&gt;&lt;p&gt;Note that for system vendors as well as DIY Hyperscale DC integrators like Facebook, support of ARM in DC is somewhat self serving for the basic reason of providing negotiating leverage with Intel on pricing&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Looking at specific application of a Map and Reduce focused compute node, the question is what an ARM cpu based server could look like in &lt;sup&gt;2014&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2015&lt;/sub&gt; and if it would add any notable differentiation benefits Vs Intel.  The analysis below focuses on exploring implications of 64-bit ARM cores used in data center for M&amp;amp;R applications.&lt;/p&gt;
+&lt;p&gt;Looking at specific application of a Map and Reduce focused compute node, the question is what an ARM cpu based server could look like in &lt;sup&gt;2014&lt;/sup&gt;&amp;frasl;&lt;sub&gt;2015&lt;/sub&gt; and if it would add any notable differentiation benefits Vs Intel. The analysis below focuses on exploring implications of 64-bit ARM cores used in data center for M&amp;amp;R applications.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt; : The analysis below concludes that ARM based servers for the target application do not seem worth the risks at this point.  If future projected ARM solutions could show 3-5x increase in final performance after all factors (including software) in same power profile then it would be worth revisiting.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt; : The analysis below concludes that ARM based servers for the target application do not seem worth the risks at this point. If future projected ARM solutions could show 3-5x increase in final performance after all factors (including software) in same power profile then it would be worth revisiting.&lt;/p&gt;
 
 &lt;h2 id=&#34;challenges-for-arm-as-server-cpu-isa&#34;&gt;Challenges for ARM as Server CPU ISA&lt;/h2&gt;
 
@@ -293,32 +313,37 @@
 
 &lt;h3 id=&#34;os-support-optimizations&#34;&gt;OS Support Optimizations&lt;/h3&gt;
 
-&lt;p&gt;There is clearly gaps today for strong generalized Linux support of the upcoming ARM silicon for DC.  There is a recent initiative termed &lt;a href=&#34;http://www.eetimes.com/electronics-news/4400339/Linaro-ARM-server-efforts-targets-Linux-code&#34; target=&#34;_blank&#34;&gt;Linaro to focus on flushing out full linux support for ARM&lt;/a&gt; related to topics starting with boot sequences and going from there.  Beyond base driver level support a major area of concern from performance oriented software developers is the extensive tooling around benchmarking and tuning of Linux on x86 that will have to mature with ARM.&lt;/p&gt;
+&lt;p&gt;There is clearly gaps today for strong generalized Linux support of the upcoming ARM silicon for DC. There is a recent initiative termed &lt;a href=&#34;http://www.eetimes.com/electronics-news/4400339/Linaro-ARM-server-efforts-targets-Linux-code&#34; target=&#34;_blank&#34;&gt;Linaro to focus on flushing out full linux support for ARM&lt;/a&gt; related to topics starting with boot sequences and going from there. Beyond base driver level support a major area of concern from performance oriented software developers is the extensive tooling around benchmarking and tuning of Linux on x86 that will have to mature with ARM.&lt;/p&gt;
 
 &lt;h3 id=&#34;compilation-tool-chains&#34;&gt;Compilation Tool Chains&lt;/h3&gt;
 
-&lt;p&gt;It has been common wisdom for a number of years that Intel&amp;rsquo;s optimizing compiler (ICC) for C/C++ is one of the better compilers in the industry and  represents again the level of multi-year optimization around x86. &lt;a href=&#34;http://www.behardware.com/articles/847-1/the-impact-of-compilers-on-x86-x64-cpu-architectures.html&#34; target=&#34;_blank&#34;&gt;Recent studies in 2012&lt;/a&gt;, there continues to be seen a notable benefit of ICC compilers of other alternatives like GCC and Microsoft.
-From the perspective of Hadoop (a Java application) the impact of not having the Intel C/C++ compiler from performance/memory standpoint may not be major, but  is representative of the types of optimization issues that ARM will have entering wide spread data center use.&lt;/p&gt;
+&lt;p&gt;It has been common wisdom for a number of years that Intel&amp;rsquo;s optimizing compiler (ICC) for C/C++ is one of the better compilers in the industry and represents again the level of multi-year optimization around x86. &lt;a href=&#34;http://www.behardware.com/articles/847-1/the-impact-of-compilers-on-x86-x64-cpu-architectures.html&#34; target=&#34;_blank&#34;&gt;Recent studies in 2012&lt;/a&gt;, there continues to be seen a notable benefit of ICC compilers of other alternatives like GCC and Microsoft. From the perspective of Hadoop (a Java application) the impact of not having the Intel C/C++ compiler from performance/memory standpoint may not be major, but is representative of the types of optimization issues that ARM will have entering wide spread data center use.&lt;/p&gt;
 
 &lt;h3 id=&#34;hypervisor-support&#34;&gt;Hypervisor Support&lt;/h3&gt;
 
-&lt;p&gt;With ARMv7/v8 there is some support for Hardware and I/O virtualization that will be supported and available in silicon by 2014.   Paravirtualization is the description of the technique used to present software interfaces up to virtual machines and is used to compensate for these gaps (accomplished by intercepting certain instructions from guest OS and interpreting them differently for the actual hardware) .&lt;br /&gt;
-* Note the ongoing maintenance of para-virtualization can be difficult with consistent performance and reliability&lt;/p&gt;
+&lt;p&gt;With ARMv7/v8 there is some support for Hardware and I/O virtualization that will be supported and available in silicon by 2014. Paravirtualization is the description of the technique used to present software interfaces up to virtual machines and is used to compensate for these gaps (accomplished by intercepting certain instructions from guest OS and interpreting them differently for the actual hardware) .&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Note the ongoing maintenance of para-virtualization can be difficult with consistent performance and reliability&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://www.wired.com/wiredenterprise/2012/08/vmware-on-arm/&#34; target=&#34;_blank&#34;&gt;Vmware has indicated pretty bluntly&lt;/a&gt; they are in no rush to support ARM, this is of course a major issue for adoption of ARM in the data center as the open source solutions will be only real option for virtualization for ARM servers in the foreseeable future.&lt;/p&gt;
 
-&lt;p&gt;For &lt;a href=&#34;http://blog.xen.org/index.php/2012/09/21/xensummit-sessions-new-pvh-virtualisation-mode-for-arm-cortex-a15arm-servers-and-x86/&#34; target=&#34;_blank&#34;&gt;KVM support of ARM&lt;/a&gt; which seem to be making progress but still early phase and have many years of work ahead of them on topics related to performance tuning, benchmarking, and para-virtualization enhancements to better compensate for missing virtualization extensions and hardware in ARM v7/v8.
-* For the x86 architecture (Intel and AMD) starting providing support for virtualization many years ago and the time frame for ARM to reach parity will be a long time&lt;/p&gt;
+&lt;p&gt;For &lt;a href=&#34;http://blog.xen.org/index.php/2012/09/21/xensummit-sessions-new-pvh-virtualisation-mode-for-arm-cortex-a15arm-servers-and-x86/&#34; target=&#34;_blank&#34;&gt;KVM support of ARM&lt;/a&gt; which seem to be making progress but still early phase and have many years of work ahead of them on topics related to performance tuning, benchmarking, and para-virtualization enhancements to better compensate for missing virtualization extensions and hardware in ARM v7/v8.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;For the x86 architecture (Intel and AMD) starting providing support for virtualization many years ago and the time frame for ARM to reach parity will be a long time&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;From the perspective of a Hadoop cluster, the weak support of hypervisor support on ARM is not necessarily a show stopper as it is a common case to run the Hadoop stack a non virtualized OS running bare metal, but it is still representative of the types of optimization issues that ARM will have entering wide spread data center use.&lt;/p&gt;
 
 &lt;h3 id=&#34;java-virtual-machines&#34;&gt;Java Virtual Machines&lt;/h3&gt;
 
-&lt;p&gt;As with prior topics, the immature state of JVM optimization for ARM compared to x86 will again be an impediment for rapid ARM adoption.  While in general the performance analysis data is sketchy in this area, &lt;a href=&#34;http://fullshovel.wordpress.com/2012/07/11/java-vs-c-on-arm/&#34; target=&#34;_blank&#34;&gt;some example experiments&lt;/a&gt; in 2012 have shown that with OpenJDK performance between C and Java on x86 platforms are in ballpark of 1:1, but when the same benchmarks are run on ARM the ratios can be as high as 3.6x to 8.9x worse for ARM.  This indicates that the level of tuning around ARM JVM support is still very immature.&lt;/p&gt;
+&lt;p&gt;As with prior topics, the immature state of JVM optimization for ARM compared to x86 will again be an impediment for rapid ARM adoption. While in general the performance analysis data is sketchy in this area, &lt;a href=&#34;http://fullshovel.wordpress.com/2012/07/11/java-vs-c-on-arm/&#34; target=&#34;_blank&#34;&gt;some example experiments&lt;/a&gt; in 2012 have shown that with OpenJDK performance between C and Java on x86 platforms are in ballpark of 1:1, but when the same benchmarks are run on ARM the ratios can be as high as 3.6x to 8.9x worse for ARM. This indicates that the level of tuning around ARM JVM support is still very immature.&lt;/p&gt;
 
-&lt;p&gt;Oracle &lt;a href=&#34;https://blogs.oracle.com/henrik/entry/oracle_releases_jdk_for_linux&#34; target=&#34;_blank&#34;&gt;has recently announced&lt;/a&gt; that they will support their JRE on ARM.  This is very important is the Oracle JRE is commonly viewed as the clear industry grade/performance leader for JRE support compared to alternative commercial and open source options.  There are some functional limitations in Oracles planned support of ARM, but they do not appear to have major impact on server applications.  However, there is no benchmarking data yet available for Oracle&amp;rsquo;s JRE and it is expected there will be a multi-year evolution required.  Additionally the first port is focused on 32-bit and ARM v7, so support for the new set of 64-bit cores will not be until well into 2013.&lt;/p&gt;
+&lt;p&gt;Oracle &lt;a href=&#34;https://blogs.oracle.com/henrik/entry/oracle_releases_jdk_for_linux&#34; target=&#34;_blank&#34;&gt;has recently announced&lt;/a&gt; that they will support their JRE on ARM. This is very important is the Oracle JRE is commonly viewed as the clear industry grade/performance leader for JRE support compared to alternative commercial and open source options. There are some functional limitations in Oracles planned support of ARM, but they do not appear to have major impact on server applications. However, there is no benchmarking data yet available for Oracle&amp;rsquo;s JRE and it is expected there will be a multi-year evolution required. Additionally the first port is focused on 32-bit and ARM v7, so support for the new set of 64-bit cores will not be until well into 2013.&lt;/p&gt;
 
-&lt;p&gt;The JVM support  for ARM is key to Hadoop which is Java based.&lt;/p&gt;
+&lt;p&gt;The JVM support for ARM is key to Hadoop which is Java based.&lt;/p&gt;
 
 &lt;h2 id=&#34;cpu-level-analysis-of-arm-vs-x86&#34;&gt;CPU level Analysis of ARM vs x86&lt;/h2&gt;
 
@@ -329,7 +354,7 @@ From the perspective of Hadoop (a Java application) the impact of not having the
 
 &lt;li&gt;&lt;p&gt;for integer/text manipulations (common in M&amp;amp;R applications which is example application considered here) expects that first order it can be approximated that ARM v8 cores should be on par with x86 E5 cores at the machine code level (ignoring any virtualization or tool chain differences that were explored above) at the same clock&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;From power standpoint expects 32 core 64-bit ARM v8 core CPU to be similar power as 10 core x86 CPU in similar time frame (100W) for same system level functionality.  This implies an upper bounds of 3x benefit per core for ARM&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;From power standpoint expects 32 core 64-bit ARM v8 core CPU to be similar power as 10 core x86 CPU in similar time frame (100W) for same system level functionality. This implies an upper bounds of 3x benefit per core for ARM&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Industry discussion of the back of the envelope statistics for a 5-10x delta between power of x86 server cores and ARM cores, generally are comparing Arm V6 32-bit cores which do not represent the power per core when the ARM ISA moves to 64-bit and starts adding more overheads like full floating point support, virtualization support (e.g. nested page tables), and coherent interconnect overheads.&lt;/li&gt;
@@ -338,7 +363,7 @@ From the perspective of Hadoop (a Java application) the impact of not having the
 &lt;li&gt;&lt;p&gt;He does not see that coherent interconnect of 32-cores will be bottleneck based on his analysis of ARM&amp;rsquo;s recent multi-interconnect (CN-504)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Looking beyond a single CPU, There is not a concrete plan available yet about support for multi-CPU mesh configurations like Intel&amp;rsquo;s QPI connection for larger shared memory  complex&lt;/p&gt;
+&lt;p&gt;Looking beyond a single CPU, There is not a concrete plan available yet about support for multi-CPU mesh configurations like Intel&amp;rsquo;s QPI connection for larger shared memory complex&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;The implication of not having this multi-CPU configuration is that each silicon instance is a standalone CPU without ability to leverage shared memory and require finer grain segregation of tasks across CPUs with separate distributed application instances across each CPU&lt;/p&gt;&lt;/li&gt;
@@ -366,7 +391,7 @@ From the perspective of Hadoop (a Java application) the impact of not having the
 
 &lt;p&gt;At a system level beyond the topic of the potential compute benefits (per Watt) of ARM vs x86, and the software complexities is question of how relevant this trade-off for a given application area.&lt;/p&gt;
 
-&lt;p&gt;First lets consider a very rough estimate for normalizing performance to BIPS (Billions of Instructions per Second) for integer operations of an ARM and x86 based CPU within 100W budget for silicon expected to be available by end of 2013.  Note that the relative JVM performance estimates may be optimistic in favor of ARM.&lt;/p&gt;
+&lt;p&gt;First lets consider a very rough estimate for normalizing performance to BIPS (Billions of Instructions per Second) for integer operations of an ARM and x86 based CPU within 100W budget for silicon expected to be available by end of 2013. Note that the relative JVM performance estimates may be optimistic in favor of ARM.&lt;/p&gt;
 
 &lt;p&gt;Relative Comparison of performance for x86 Vs ARM 64-bit Server CPU&lt;/p&gt;
 
@@ -423,9 +448,9 @@ From the perspective of Hadoop (a Java application) the impact of not having the
 &lt;p&gt;Going to system level, if we assume that over time with software and further silicon optimization ARM based CPUs improved to a solid 2x final performance (relative BIPS) per watt benefit of ARM over x86 after all overheads, how much would this impact system optimization for the Map and Reduce application in a rack server ?&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Taking into account memory, disk, IO and other overheads, the final system impact in system density for a 2:1 would have estimated &amp;lt;20% benefit at system level.  This does not seem to have enough impact to warrant the significant risk and effort.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Taking into account memory, disk, IO and other overheads, the final system impact in system density for a 2:1 would have estimated &amp;lt;20% benefit at system level. This does not seem to have enough impact to warrant the significant risk and effort.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;As an example, consider that for recent hadoop cluster analysis, the ratio of x86 cores to spindles may be as high as 1:5, this implies that a blade with say 32 cores would matchup with 160 spinning disks.   This is significant amount of space and power compared to the CPU complex, making the raw CPU performance less relevant.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As an example, consider that for recent hadoop cluster analysis, the ratio of x86 cores to spindles may be as high as 1:5, this implies that a blade with say 32 cores would matchup with 160 spinning disks. This is significant amount of space and power compared to the CPU complex, making the raw CPU performance less relevant.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;If it were possible to achieve a ratio of say 3-5x of ARM over x86 in final relative BIP performance per watt, and aiming for 100&amp;rsquo;s of ARM cores on a blade (or in a 2RU rack server), then merging this optimization with a major overhaul of the system design to match the massively multi-core architecture in areas of disk/memory/IO could result in a significant different optimization point then x86 servers today.&lt;/p&gt;
