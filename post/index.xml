@@ -6,18 +6,31 @@
     <description>Recent content in Posts on Will Eatherton</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 05 Feb 2019 14:00:29 -0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 Sep 2017 14:00:29 -0800</lastBuildDate>
     
 	<atom:link href="https://willeatherton.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>My First Post</title>
-      <link>https://willeatherton.com/post/my-first-post/</link>
-      <pubDate>Tue, 05 Feb 2019 14:00:29 -0800</pubDate>
+      <title>Opaque Crypto : What happens when the Enterprise Network goes Dark ?</title>
+      <link>https://willeatherton.com/post/crypto1v4/</link>
+      <pubDate>Tue, 05 Sep 2017 14:00:29 -0800</pubDate>
       
-      <guid>https://willeatherton.com/post/my-first-post/</guid>
-      <description>my text</description>
+      <guid>https://willeatherton.com/post/crypto1v4/</guid>
+      <description>The Rise of Opaque encryption Resets the Network Security Industry
+{Note this writeup was done in summer of 2017 while I was at Skyport Systems as Founder and VP of Engineering}
+During my time at Cisco and Juniper (1999-2013), our marketing departments unveiled many campaigns around the &amp;ldquo;Intelligent Network.&amp;rdquo; To deliver on this message, we kept building products and features that would use stateful views of deep packet data to help reinforce the marketing story about the value of the network.</description>
+    </item>
+    
+    <item>
+      <title>ARM CPU&#39;s for Data Center Servers</title>
+      <link>https://willeatherton.com/post/armanalysis/</link>
+      <pubDate>Wed, 05 Sep 2012 14:00:29 -0800</pubDate>
+      
+      <guid>https://willeatherton.com/post/armanalysis/</guid>
+      <description>{Note this writeup was done privately at end of 2012 and so pretty outdated, but still I think it was a decent summary of the state of ARM at that time and so I publish it for fun. I am considering to do an updated Arm Analysis given the changes that have happened in past year}
+Will Eatherton - willeatherton@gmail.com
+Exec Summary The buzz around Arm based CPU&amp;rsquo;s for the Server Ecosystem has been growing notably in mid 2012.</description>
     </item>
     
   </channel>
