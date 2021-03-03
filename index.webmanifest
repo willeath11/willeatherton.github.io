@@ -1,0 +1,18 @@
+{
+  "name": "Will Eatherton",
+  "short_name": "Will Eatherton",
+  "lang": "en-us",
+  "theme_color": "hsl(339, 90%, 68%)",
+  "background_color": "hsl(339, 90%, 68%)",
+  "icons": [{
+    "src": "/media/icon_hu3ac9caf249b0f5408f238ccac1a4254f_26012_192x192_fill_lanczos_center_2.png",
+    "sizes": "192x192",
+    "type": "image/png"
+    }, {
+    "src": "/media/icon_hu3ac9caf249b0f5408f238ccac1a4254f_26012_512x512_fill_lanczos_center_2.png",
+    "sizes": "512x512",
+    "type": "image/png"
+     }],
+  "display": "standalone",
+  "start_url": "/?utm_source=web_app_manifest"
+}

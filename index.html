@@ -1,14 +1,18 @@
+<!DOCTYPE html><html lang="en-us" >
 
-<!DOCTYPE html>
-<html lang="en-us">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.0.0-beta.3 for Hugo" />
+  
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 3.3.0">
-  <meta name="generator" content="Hugo 0.54.0" />
+  
 
+  
   
 
   
@@ -22,37 +26,44 @@
   
   
 
-  <meta name="author" content="Will Eatherton">
+  <meta name="author" content="Will Eatherton" />
 
   
   
   
     
   
-  <meta name="description" content="">
+  <meta name="description" content="SVP Engineering" />
 
   
-  <link rel="alternate" hreflang="en-us" href="https://willeatherton.com/">
-
-  
-
+  <link rel="alternate" hreflang="en-us" href="https://willeatherton.com/" />
 
   
 
-  
+
+
+
+
+
 
   
 
-  
 
-  
 
-  
 
   
   
+
   
-  <meta name="theme-color" content="#2962ff">
+  
+  
+    <meta name="theme-color" content="hsl(339, 90%, 68%)" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
   
 
   
@@ -60,10 +71,15 @@
   
   
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
 
     
     
@@ -74,84 +90,307 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'">
         
       
     
 
     
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
 
     
 
-  
-
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
-  
-
-  <link rel="stylesheet" href="/styles.css">
-  
-
-  
-  
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-134080407-1', 'auto');
+    
+    
       
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-      ga('send', 'pageview');
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
+      
+
+      
+      
+
+      
     
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.90b047e8ead671d498d63df322a0ede3.css" />
+
+  
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134080407-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-134080407-1', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
+
+  
+    <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Will Eatherton" />
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hu3ac9caf249b0f5408f238ccac1a4254f_26012_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu3ac9caf249b0f5408f238ccac1a4254f_26012_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="https://willeatherton.com/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
     
   
   
-
+  <meta property="twitter:card" content="summary" />
   
-  <link rel="alternate" href="https://willeatherton.com/index.xml" type="application/rss+xml" title="Will Eatherton">
-  <link rel="feed" href="https://willeatherton.com/index.xml" type="application/rss+xml" title="Will Eatherton">
-  
-
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon.png">
-  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
-
-  <link rel="canonical" href="https://willeatherton.com/">
-
-  
-  
-  
+  <meta property="og:site_name" content="Will Eatherton" />
+  <meta property="og:url" content="https://willeatherton.com/" />
+  <meta property="og:title" content="Will Eatherton" />
+  <meta property="og:description" content="SVP Engineering" /><meta property="og:image" content="https://willeatherton.com/media/icon_hu3ac9caf249b0f5408f238ccac1a4254f_26012_512x512_fill_lanczos_center_2.png" />
+    <meta property="twitter:image" content="https://willeatherton.com/media/icon_hu3ac9caf249b0f5408f238ccac1a4254f_26012_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
+      <meta property="og:updated_time" content="2017-09-05T14:00:29-08:00" />
     
   
-  <meta property="twitter:card" content="summary">
+
   
-  <meta property="twitter:site" content="@@willeath11">
-  <meta property="twitter:creator" content="@@willeath11">
-  
-  <meta property="og:site_name" content="Will Eatherton">
-  <meta property="og:url" content="https://willeatherton.com/">
-  <meta property="og:title" content="Will Eatherton">
-  <meta property="og:description" content=""><meta property="og:image" content="https://willeatherton.com/img/icon-192.png">
-  <meta property="og:locale" content="en-us">
-  
-  <meta property="og:updated_time" content="2017-10-15T00:00:00-07:00">
-  
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://willeatherton.com?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "url": "https://willeatherton.com"
+}
+</script>
+
 
   
 
   
+
+  
+
+
+
+
 
   <title>Will Eatherton</title>
-
 </head>
-<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71" >
-  <aside class="search-results" id="search">
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper  dark "  >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.28f1261b7b121e16b4600b033e98e13f.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
   <div class="container">
     <section class="search-header">
 
@@ -160,16 +399,22 @@
           <h1>Search</h1>
         </div>
         <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
         </div>
       </div>
 
       <div id="search-box">
         
         <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
         
       </div>
+
+      
+      
+
+      
 
     </section>
     <section class="section-search-results">
@@ -183,126 +428,320 @@
 </aside>
 
 
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
-  <div class="container">
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
 
     
+    <div class="d-none d-lg-inline-flex">
       <a class="navbar-brand" href="/">Will Eatherton</a>
-      
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fas fa-bars"></i></span>
-      </button>
-      
+    </div>
+    
 
     
-    <div class="collapse navbar-collapse" id="navbar">
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
 
-      
-      
-      <ul class="navbar-nav mr-auto">
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#posts" data-target="#posts">
-            
-            <span>Home</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#posts" data-target="#posts">
-            
-            <span>Posts</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-        
-
-        
-        
-        
-          
-        
-
-        <li class="nav-item">
-          <a class="nav-link" href="/#contact" data-target="#contact">
-            
-            <span>Contact</span>
-            
-          </a>
-        </li>
-
-        
-        
-
-      
-      </ul>
-      <ul class="navbar-nav ml-auto">
-      
-
-        
-
-        
-        <li class="nav-item">
-          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-        </li>
-        
-
-        
-
-        
-        <li class="nav-item">
-          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-        </li>
-        
-
-      </ul>
-
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Will Eatherton</a>
     </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#home" data-target="#home"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/post"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact" data-target="#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+
+      
+      
+
+      
+      
+
+      
+
+    </ul>
+
   </div>
 </nav>
 
 
+  </div>
 
-<span id="homepage" style="display: none"></span>
+  <div class="page-body">
+    
 
 
+
+
+
+
+
+
+
+  
+<span class="js-widget-page d-none"></span>
+
+
+
+
+
+  
+  
+  
   
 
 
 
 
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  
 
   
   
   
-  <section id="posts" class="home-section">
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  <section id="posts" class="home-section wg-pages  "  >
+   <div class="home-section-bg " ></div>
     <div class="container">
+
+    
+      <div class="row  ">
+      
+        
+          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class="mb-0">Recent Posts</h1>
+            
+          </div>
+        
+      
+    
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+<div class="col-12 col-lg-8">
+
+  
+
+  
+    
       
 
 
@@ -315,28 +754,34 @@
 
 
 
-<div class="row">
-  <div class="col-12 col-lg-4 section-heading">
 
-    <h1>Recent Posts</h1>
+
+  
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/post/crypto1v4/" >Opaque Crypto : What happens when the Enterprise Network goes Dark ?</a>
+    </div>
+
     
+    <a href="/post/crypto1v4/"  class="summary-link">
+      <div class="article-style">
+        The Rise of Opaque encryption Resets the Network Security Industry
+{Note this writeup was done in summer of 2017 while I was at Skyport Systems as Founder and VP of Engineering}
+      </div>
+    </a>
     
 
-  </div>
-  <div class="col-12 col-lg-8">
+    <div class="stream-meta article-metadata">
 
-    
+      
 
-    
       
         
 
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-
-
-<meta content="2017-09-05 14:00:29 -0800 -0800" itemprop="datePublished">
-<meta content="2017-09-05 14:00:29 -0800 -0800" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -348,9 +793,13 @@
     
     
       
+          Last updated on
+      
     
-    <time>Sep 5, 2017</time>
+    Mar 2, 2021
   </span>
+  
+
   
 
   
@@ -362,45 +811,70 @@
 
   
   
-
-  
-
-  
-
-</div>
-
-
   
   
   
-  <h3 class="article-title" itemprop="headline">
-    <a href="/2017/09/opaque-crypto-what-happens-when-the-enterprise-network-goes-dark/" itemprop="url">Opaque Crypto : What happens when the Enterprise Network goes Dark ?</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
-    
-    The Rise of Opaque encryption Resets the Network Security Industry
-{Note this writeup was done in summer of 2017 while I was at Skyport Systems as Founder and VP of Engineering}
-During my time at Cisco and Juniper (1999-2013), our marketing departments unveiled many campaigns around the &ldquo;Intelligent Network.&rdquo; To deliver on this message, we kept building products and features that would use stateful views of deep packet data to help reinforce the marketing story about the value of the network.
-    
-  </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/2017/09/opaque-crypto-what-happens-when-the-enterprise-network-goes-dark/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
-    </a>
-  </p>
+  
+
+  
+  
+
 </div>
 
       
+    </div>
+
     
+
+  </div>
+  <div class="ml-3">
+    
+    
+  </div>
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/post/armanalysis/" >ARM CPU&#39;s for Data Center Servers</a>
+    </div>
+
+    
+    <a href="/post/armanalysis/"  class="summary-link">
+      <div class="article-style">
+        {Note this writeup was done privately at end of 2012 and so pretty outdated, but still I think it was a decent summary of the state of ARM at that time and so I publish it for fun.
+      </div>
+    </a>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
       
         
 
-<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
-  
-
-
-<meta content="2012-09-05 14:00:29 -0800 -0800" itemprop="datePublished">
-<meta content="2012-09-05 14:00:29 -0800 -0800" itemprop="dateModified">
 
 <div class="article-metadata">
 
@@ -412,9 +886,13 @@ During my time at Cisco and Juniper (1999-2013), our marketing departments unvei
     
     
       
+          Last updated on
+      
     
-    <time>Sep 5, 2012</time>
+    Mar 2, 2021
   </span>
+  
+
   
 
   
@@ -426,128 +904,316 @@ During my time at Cisco and Juniper (1999-2013), our marketing departments unvei
 
   
   
-
+  
+  
+  
   
 
+  
   
 
 </div>
 
+      
+    </div>
 
-  
-  
-  
-  <h3 class="article-title" itemprop="headline">
-    <a href="/2012/09/arm-cpus-for-data-center-servers/" itemprop="url">ARM CPU&#39;s for Data Center Servers</a>
-  </h3>
-  <div class="article-style" itemprop="articleBody">
     
-    {Note this writeup was done privately at end of 2012 and so pretty outdated, but still I think it was a decent summary of the state of ARM at that time and so I publish it for fun. I am considering to do an updated Arm Analysis given the changes that have happened in past year}
-Will Eatherton - willeatherton@gmail.com
-Table of Contents    Exec Summary Challenges for ARM as Server CPU ISA  OS Support Optimizations Compilation Tool Chains Hypervisor Support Java Virtual Machines  CPU level Analysis of ARM vs x86 Analysis of Arm CPU for a M&amp;R Compute Node    Exec Summary The buzz around Arm based CPU&rsquo;s for the Server Ecosystem has been growing notably in mid 2012.
+
+  </div>
+  <div class="ml-3">
+    
     
   </div>
-  <p class="read-more" itemprop="mainEntityOfPage">
-    <a href="/2012/09/arm-cpus-for-data-center-servers/" class="btn btn-outline-primary my-1">
-      CONTINUE READING
+</div>
+
+    
+  
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<div class="media stream-item">
+  <div class="media-body">
+
+    <div class="section-subheading article-title mb-0 mt-0">
+      <a href="/post/test-blog/" >Test Article</a>
+    </div>
+
+    
+    <a href="/post/test-blog/"  class="summary-link">
+      <div class="article-style">
+        Title of article - first level Table of Contents  Secondary Title Text Formatting Table mathjax  Example code   Figures    Secondary Title Text In his past, Dalinar hated it when someone implied that he was insecure.
+      </div>
     </a>
-  </p>
+    
+
+    <div class="stream-meta article-metadata">
+
+      
+
+      
+        
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Mar 2, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+
 </div>
 
       
+    </div>
+
     
 
   </div>
+  <div class="ml-3">
+    
+    
+  </div>
 </div>
+
+    
+  
+
+  
+  
+  
+
+</div>
+
+
+    
+      </div>
+    
 
     </div>
   </section>
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
   
 
   
   
   
-  <section id="contact" class="home-section">
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+  <section id="contact" class="home-section wg-contact  "  >
+   <div class="home-section-bg " ></div>
     <div class="container">
-      
-
-
-
-
-<div class="row contact-widget">
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>Contact</h1>
-    
-  </div>
-  <div class="col-12 col-lg-8">
-    
 
     
-
-    <ul class="fa-ul" itemscope>
-
+      <div class="row  ">
       
-      <li>
-        <i class="fa-li fas fa-envelope fa-2x" aria-hidden="true"></i>
-        <span id="person-email" itemprop="email"><a href="mailto:willeatherton@gmail.com">willeatherton@gmail.com</a></span>
-      </li>
+        
+          <div class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <h1 class="mb-0">Contact</h1>
+            
+          </div>
+        
       
-
-      
-
-      
-      <li>
-        <i class="fa-li fas fa-map-marker fa-2x" aria-hidden="true"></i>
-        <span id="person-address" itemprop="address">San Jose, California, 95120, USA</span>
-      </li>
-      
+    
 
       
 
-      
 
-      
-      
 
-    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-12 col-lg-8">
+  
+
+  
+
+  <ul class="fa-ul">
+
+    
+    <li>
+      <i class="fa-li fas fa-envelope fa-2x" aria-hidden="true"></i>
+      <span id="person-email"><a href="mailto:willeatherton@gmail.com">willeatherton@gmail.com</a></span>
+    </li>
+    
 
     
 
-  </div>
+    
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <i class="fa-li fab fa-twitter fa-2x" aria-hidden="true"></i>
+      <a href="https://twitter.com/willeatherton" target="_blank" rel="noopener">twitter.com/willeatherton</a>
+    </li>
+    
+
+  </ul>
+
+  
+
 </div>
+
+
+    
+      </div>
+    
 
     </div>
   </section>
-  
 
 
 
-<div class="container">
-  <footer class="site-footer">
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
   
 
   <p class="powered-by">
-    
+    Copyright Will Eatherton
+  </p>
 
-    Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+  
+  
 
+
+
+
+
+
+  <p class="powered-by">
     
-    <span class="float-right" aria-hidden="true">
-      <a href="#" id="back_to_top">
-        <span class="button_icon">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </span>
-      </a>
-    </span>
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
     
   </p>
 </footer>
 
-</div>
+    </div>
+    
+  </div>
 
-
+  
 <div id="modal" class="modal fade" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -573,92 +1239,89 @@ Table of Contents    Exec Summary Challenges for ARM as Server CPU ISA  OS Suppo
   </div>
 </div>
 
-    
+      
 
     
     
     
-    <script src="/js/mathjax-config.js"></script>
-    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
 
-    
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      
+
+      
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
         
       
 
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
       
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
-      
-    
-
-    
-    
-
-    
-    
-    
-
-    
-    
-    <script>hljs.initHighlightingOnLoad();</script>
-    
-
-    
-    
-    <script>
-      const search_index_filename = "/index.json";
-      const i18n = {
-        'placeholder': "Search...",
-        'results': "results found",
-        'no_results': "No results found"
-      };
-      const content_type = {
-        'post': "Posts",
-        'project': "Projects",
-        'publication' : "Publications",
-        'talk' : "Talks"
-        };
-    </script>
-    
-
-    
-    
-
-    
-    
-    <script id="search-hit-fuse-template" type="text/x-template">
-      <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
         </div>
-      </div>
-      </div>
-    </script>
-    
-
-    
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
     
 
     
     
 
+    
+    
+    
+    
+
+    <script src="/js/_vendor/bootstrap.bundle.min.f81d0a1705048649befc8b595e455a94.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
     
     
     
@@ -667,13 +1330,17 @@ Table of Contents    Exec Summary Challenges for ARM as Server CPU ISA  OS Suppo
     
     
       
+      
     
     
-    
-    
-    <script src="/js/academic.min.07fbebbbf71b021c8836e1d7ecffa489.js"></script>
+    <script src="/en/js/wowchemy.min.e20609e6ad3f7fce339ee2e74f13682b.js"></script>
 
-  </body>
+    
+
+
+
+
+
+
+</body>
 </html>
-
-

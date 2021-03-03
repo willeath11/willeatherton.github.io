@@ -1,101 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-    
-    <url>
-    
-      <loc>https://willeatherton.com/2017/09/opaque-crypto-what-happens-when-the-enterprise-network-goes-dark/</loc>
-      <lastmod>2017-09-05T14:00:29-08:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://willeatherton.com/publication/</loc>
-      <lastmod>2017-01-01T00:00:00-08:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://willeatherton.com/talk/</loc>
-      <lastmod>2017-01-01T00:00:00-08:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://willeatherton.com/2012/09/arm-cpus-for-data-center-servers/</loc>
-      <lastmod>2012-09-05T14:00:29-08:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://willeatherton.com/author/admin/</loc>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://willeatherton.com/author/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://willeatherton.com/authors/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://willeatherton.com/categories/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://willeatherton.com/post/</loc>
-      <lastmod>2017-09-05T14:00:29-08:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://willeatherton.com/publication_types/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://willeatherton.com/tags/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <loc>https://willeatherton.com/</loc>
-      <lastmod>2017-10-15T00:00:00-07:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://willeatherton.com/tag/it/</loc>
+    <lastmod>2021-03-02T21:37:39-08:00</lastmod>
+  </url><url>
+    <loc>https://willeatherton.com/post/crypto1v4/</loc>
+    <lastmod>2021-03-02T21:37:39-08:00</lastmod>
+  </url><url>
+    <loc>https://willeatherton.com/tags/</loc>
+    <lastmod>2021-03-02T21:37:39-08:00</lastmod>
+  </url><url>
+    <loc>https://willeatherton.com/</loc>
+    <lastmod>2021-03-02T21:37:39-08:00</lastmod>
+  </url><url>
+    <loc>https://willeatherton.com/post/armanalysis/</loc>
+    <lastmod>2021-03-02T21:37:39-08:00</lastmod>
+  </url><url>
+    <loc>https://willeatherton.com/tag/tag1/</loc>
+    <lastmod>2021-03-02T21:37:39-08:00</lastmod>
+  </url><url>
+    <loc>https://willeatherton.com/post/test-blog/</loc>
+    <lastmod>2021-03-02T21:37:39-08:00</lastmod>
+  </url><url>
+    <loc>https://willeatherton.com/admin/</loc>
+    <lastmod>2021-03-02T16:26:36-08:00</lastmod>
+  </url><url>
+    <loc>https://willeatherton.com/categories/</loc>
+  </url><url>
+    <loc>https://willeatherton.com/post/</loc>
+    <lastmod>2021-03-02T21:37:39-08:00</lastmod>
+  </url><url>
+    <loc>https://willeatherton.com/publication_types/</loc>
+  </url>
 </urlset>
