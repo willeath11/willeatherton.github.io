@@ -5,7 +5,7 @@
     <link>https://willeatherton.com/post/</link>
       <atom:link href="https://willeatherton.com/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Copyright Will Eatherton</copyright>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Copyright Will Eatherton</copyright><lastBuildDate>Tue, 05 Sep 2017 14:00:29 -0800</lastBuildDate>
     <image>
       <url>https://willeatherton.com/media/icon_hu3ac9caf249b0f5408f238ccac1a4254f_26012_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
@@ -356,7 +356,12 @@
 &lt;p&gt;At a system level beyond the topic of the potential compute benefits (per Watt) of ARM vs x86, and the software complexities is question of how relevant this trade-off for a given application area.&lt;/p&gt;
 &lt;p&gt;First lets consider a very rough estimate for normalizing performance to BIPS (Billions of Instructions per Second) for integer operations of an ARM and x86 based CPU within 100W budget for silicon expected to be available by end of 2013. Note that the relative JVM performance estimates may be optimistic in favor of ARM.&lt;/p&gt;
 &lt;p&gt;Relative Comparison of performance for x86 Vs ARM 64-bit Server CPU&lt;/p&gt;
-&lt;table&gt;
+
+
+
+
+
+&lt;table class=&#34;table table-striped&#34;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Performance Factor&lt;/th&gt;
@@ -397,6 +402,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
 &lt;p&gt;&lt;strong&gt;In summary while a crude estimate, this final ratio of relative performance with in 100W is close enough to 1:1 that it is not interesting.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Going to system level, if we assume that over time with software and further silicon optimization ARM based CPUs improved to a solid 2x final performance (relative BIPS) per watt benefit of ARM over x86 after all overheads, how much would this impact system optimization for the Map and Reduce application in a rack server ?&lt;/p&gt;
 &lt;ul&gt;
